@@ -16,6 +16,6 @@ $ docker run -d -p 8000:8000 -p 9443:9443 --name portainer \
     cr.portainer.io/portainer/portainer-ce:2.9.3
 ```
 
-Docker compose files run via Terminal.
+Run docker compose files via terminal from respective folders.
 
 ```$ sudo docker-compose up -d```
