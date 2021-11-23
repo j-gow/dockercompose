@@ -1,0 +1,17 @@
+---
+version: "2.1"
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr
+    container_name: radarr
+    environment:
+      - PUID=james
+      - PGID=james
+      - TZ=Europe/London
+    volumes:
+      - /media/james/storage/dockerconfigs/radarr:/config
+      - /media/james/storage/films:/films
+      - /media/james/storage/downloads:/downloads
+    ports:
+      - 7878:7878
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+---
+version: "2.1"
+services:
+  ombi:
+    image: lscr.io/linuxserver/ombi
+    container_name: ombi
+    environment:
+      - PUID=james
+      - PGID=james
+      - TZ=Europe/London
+    volumes:
+      - /media/james/storage/dockerconfigs/ombi:/config
+    ports:
+      - 3579:3579
+    restart: unless-stopped
